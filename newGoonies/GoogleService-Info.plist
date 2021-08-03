@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>182520184465-sca1tnr6981994hcnhhesa26e3h2bkst.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.182520184465-sca1tnr6981994hcnhhesa26e3h2bkst</string>
+	<key>API_KEY</key>
+	<string>AIzaSyALk14tm-XlXKoUpsNoijKVn_ewu1WHa9Q</string>
+	<key>GCM_SENDER_ID</key>
+	<string>182520184465</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>duru.u.newGoonies</string>
+	<key>PROJECT_ID</key>
+	<string>goonies-713fc</string>
+	<key>STORAGE_BUCKET</key>
+	<string>goonies-713fc.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:182520184465:ios:da0721751341cdd62ec930</string>
+</dict>
+</plist>
