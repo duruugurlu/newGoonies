@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class mainViewController: UIViewController {
 
@@ -15,7 +16,14 @@ class mainViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func profilePressed(_ sender: Any) {
+        performSegue(withIdentifier: "toProfile", sender: nil)
+    }
+    
+    @IBAction func logOutPressed(_ sender: Any) {
+        
+    }
+    
     /*
     // MARK: - Navigation
 

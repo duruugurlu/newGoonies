@@ -31,6 +31,7 @@ class ViewController: UIPageViewController {
         style()
         layout()
     }
+
 }
 
 extension ViewController {
@@ -40,7 +41,7 @@ extension ViewController {
         delegate = self
         
         pageControl.addTarget(self, action: #selector(pageControlTapped(_:)), for: .valueChanged)
-
+        
         // create an array of viewController
         let page1 = ViewController1()
         let page2 = ViewController2()
@@ -71,6 +72,8 @@ extension ViewController {
             pageControl.heightAnchor.constraint(equalToConstant: 20),
             view.bottomAnchor.constraint(equalToSystemSpacingBelow: pageControl.bottomAnchor, multiplier: 1),
         ])
+        
+        
     }
 }
 

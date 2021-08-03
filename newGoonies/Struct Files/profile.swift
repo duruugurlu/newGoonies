@@ -6,3 +6,14 @@
 //
 
 import Foundation
+import UIKit
+
+struct ProfileItem {
+    let sectionName : String
+    let sectionImage : UIImage
+    
+    init (name : String, image : UIImage) {
+        sectionName = name
+        sectionImage = image
+    }
+}
