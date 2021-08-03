@@ -30,6 +30,7 @@ class ViewController: UIPageViewController {
         setup()
         style()
         layout()
+        print("selam")
     }
 
 }
