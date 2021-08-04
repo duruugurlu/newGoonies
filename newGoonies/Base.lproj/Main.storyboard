@@ -289,19 +289,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SxC-iV-IFs">
-                                <rect key="frame" x="317" y="70" width="44" height="22"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="BhU-91-DPo">
+                                <rect key="frame" x="325" y="74" width="47" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="profile"/>
-                                <connections>
-                                    <action selector="profilePressed:" destination="RPB-te-Per" eventType="touchUpInside" id="Asd-mV-kI4"/>
-                                </connections>
-                            </button>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="g9u-qJ-rub"/>
                     <connections>
+                        <outlet property="profileImage" destination="BhU-91-DPo" id="giI-n2-tV9"/>
                         <segue destination="lAT-b8-UmT" kind="show" identifier="toProfile" id="86k-o0-UOl"/>
                     </connections>
                 </viewController>
@@ -353,7 +350,7 @@
         <!--Profile View Controller-->
         <scene sceneID="JWL-dW-7AZ">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="lAT-b8-UmT" customClass="profileViewController" customModule="newGoonies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="lAT-b8-UmT" customClass="profileViewController" customModule="newGoonies" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bpN-6C-oel"/>
                         <viewControllerLayoutGuide type="bottom" id="lf6-fD-R24"/>
@@ -426,7 +423,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3cS-f8-HQ8">
-                                <rect key="frame" x="32" y="117" width="79" height="87"/>
+                                <rect key="frame" x="32" y="117" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWl-zc-WSe">
@@ -436,6 +433,9 @@
                                 <state key="normal">
                                     <imageReference key="image" image="homekit" catalog="system" symbolScale="large"/>
                                 </state>
+                                <connections>
+                                    <action selector="homePressed:" destination="lAT-b8-UmT" eventType="touchUpInside" id="EMH-hr-nGY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -444,11 +444,13 @@
                     <connections>
                         <outlet property="addressLabel" destination="qli-n9-RHR" id="Ki2-tw-e9K"/>
                         <outlet property="emailLabel" destination="DLF-dn-5hh" id="6O7-Nm-rvr"/>
+                        <outlet property="homeButton" destination="lWl-zc-WSe" id="QK6-1j-xQS"/>
                         <outlet property="logOutButton" destination="K39-YK-a5u" id="UJ5-a8-thJ"/>
                         <outlet property="nameLabel" destination="Po2-n7-whR" id="eAt-nZ-eO5"/>
                         <outlet property="profileImage" destination="3cS-f8-HQ8" id="LSt-yh-15v"/>
                         <outlet property="profileTableView" destination="hnR-5O-sUK" id="1hy-Y2-uhg"/>
                         <segue destination="aJh-ld-FOW" kind="presentation" identifier="backToLogInVC" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Voj-aX-tJX"/>
+                        <segue destination="RPB-te-Per" kind="presentation" identifier="profileToMain" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="31X-j4-BPe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gyH-ih-Gmo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -457,13 +459,14 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="flg-fS-LER"/>
+        <segue reference="31X-j4-BPe"/>
         <segue reference="Voj-aX-tJX"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Log In" width="1500" height="3248"/>
         <image name="ProfileBackground" width="1125" height="2523"/>
         <image name="Register" width="1500" height="3248"/>
+        <image name="arrow" width="30" height="48"/>
         <image name="buttonSignIn" width="927" height="171"/>
         <image name="buttonWalkthrough" width="417" height="126"/>
         <image name="homekit" catalog="system" width="128" height="106"/>

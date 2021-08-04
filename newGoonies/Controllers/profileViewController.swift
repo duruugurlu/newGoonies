@@ -10,6 +10,7 @@ import Firebase
 
 class profileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
+    @IBOutlet weak var homeButton: UIButton!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var profileTableView: UITableView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -31,6 +32,7 @@ class profileViewController: UIViewController, UITableViewDelegate, UITableViewD
         pictureUpload()
     }
     
+//  Configuring the UI when the view is accessed
     func configureUI() {
         logOutButton.titleLabel?.font = UIFont(name: "Poppins-Medium", size: 14.0)
         logOutButton.titleLabel?.adjustsFontForContentSizeCategory = true
@@ -54,6 +56,7 @@ class profileViewController: UIViewController, UITableViewDelegate, UITableViewD
         
     }
     
+//  Functions for the item tableview
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
@@ -69,6 +72,7 @@ class profileViewController: UIViewController, UITableViewDelegate, UITableViewD
         return 80
     }
     
+//  Trial function for getting the user's information from firebase
     func getData() {
         firestoreDatabase.collection("Users").getDocuments { [self] (querySnapshot, error) in
             if let error = error {
@@ -87,7 +91,7 @@ class profileViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
-    
+//  Actual function used to grab the user's data from firebase
     func newGetData() {
         firestoreDatabase.collection("Users").document(Auth.auth().currentUser!.email!).getDocument { (docSnapshot, error) in
             let userInfo = docSnapshot?.data()
@@ -103,7 +107,8 @@ class profileViewController: UIViewController, UITableViewDelegate, UITableViewD
             }
         }
     }
-    
+
+//  Logging out of the account and going back to the sign in page
     @IBAction func logOutPressed(_ sender: Any) {
         do {
             try Auth.auth().signOut()
@@ -113,7 +118,7 @@ class profileViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
    
-//
+//  Uploading a new profile picture / displaying the current porfile picture
     func pictureUpload() {
         profileImage.isUserInteractionEnabled = true
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(chooseImage))
@@ -126,6 +131,7 @@ class profileViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
 
+//  Helper function that handles the image picker controller
     @objc func chooseImage() {
         let pickerController = UIImagePickerController()
         pickerController.delegate = self
@@ -134,6 +140,7 @@ class profileViewController: UIViewController, UITableViewDelegate, UITableViewD
         present(pickerController, animated: true)
     }
     
+//  Storing the image picked with the picker controller
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
             profileImage.contentMode = .scaleAspectFit
@@ -148,12 +155,18 @@ class profileViewController: UIViewController, UITableViewDelegate, UITableViewD
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
-    
+
+//  Rounding the profile image
     func roundedImage(){
             profileImage.backgroundColor = UIColor.black
             profileImage.layer.cornerRadius = profileImage.frame.size.width / 2
             profileImage.clipsToBounds = true
             profileImage.layer.borderWidth = 4
-            profileImage.layer.borderColor = UIColor.white.cgColor
+        profileImage.layer.borderColor = (UIColor(named: "profileColor")?.cgColor)
         }
+    
+//  Segueing to the main page
+    @IBAction func homePressed(_ sender: Any) {
+        performSegue(withIdentifier: "profileToMain", sender: nil)
+    }
 }
