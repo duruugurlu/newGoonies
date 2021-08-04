@@ -10,28 +10,39 @@ import Firebase
 
 class mainViewController: UIViewController {
 
+    @IBOutlet weak var profileImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        segueToProfile()
+        configureUI()
     }
     
-    @IBAction func profilePressed(_ sender: Any) {
+    func segueToProfile () {
+        profileImage.isUserInteractionEnabled = true
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(goToProfile))
+        profileImage.addGestureRecognizer(gestureRecognizer)
+    }
+    
+    @objc func goToProfile() {
         performSegue(withIdentifier: "toProfile", sender: nil)
     }
     
-    @IBAction func logOutPressed(_ sender: Any) {
+    func configureUI() {
+        let profilePic = UserDefaults.standard.object(forKey: "profilePhoto") as? NSData
+        if profilePic == nil {
+            profileImage.image = UIImage(named: "notSelected")
+        } else {
+            profileImage.image = UIImage(data: profilePic! as Data)
+        }
         
+        roundedImage()
     }
-    
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    func roundedImage(){
+            profileImage.backgroundColor = UIColor.black
+            profileImage.layer.cornerRadius = profileImage.frame.size.width / 2
+            profileImage.clipsToBounds = true
+            profileImage.layer.borderWidth = 4
+            profileImage.layer.borderColor = UIColor.white.cgColor
+        }
 }
