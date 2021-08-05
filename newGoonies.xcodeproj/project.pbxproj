@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2EF08ACE7F18D317C4BD5967 /* Pods_newGoonies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95F483FCF207769B715BBE4C /* Pods_newGoonies.framework */; };
+		8668C24826BC1634001E855D /* dealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8668C24726BC1634001E855D /* dealsViewController.swift */; };
+		8668C24B26BC17F3001E855D /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8668C24A26BC17F3001E855D /* Poppins-Bold.ttf */; };
 		866ADCFD26B7EDEB00F4A68C /* profileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866ADCFB26B7EDEB00F4A68C /* profileTableViewCell.swift */; };
 		866ADCFE26B7EDEB00F4A68C /* profileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 866ADCFC26B7EDEB00F4A68C /* profileTableViewCell.xib */; };
 		866ADD0226B910EF00F4A68C /* profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866ADD0126B910EF00F4A68C /* profile.swift */; };
@@ -34,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		57BC6E3BA1794A234111A3C4 /* Pods-newGoonies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-newGoonies.debug.xcconfig"; path = "Target Support Files/Pods-newGoonies/Pods-newGoonies.debug.xcconfig"; sourceTree = "<group>"; };
+		8668C24726BC1634001E855D /* dealsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dealsViewController.swift; sourceTree = "<group>"; };
+		8668C24A26BC17F3001E855D /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		866ADCFB26B7EDEB00F4A68C /* profileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileTableViewCell.swift; sourceTree = "<group>"; };
 		866ADCFC26B7EDEB00F4A68C /* profileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = profileTableViewCell.xib; sourceTree = "<group>"; };
 		866ADD0126B910EF00F4A68C /* profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profile.swift; sourceTree = "<group>"; };
@@ -157,6 +161,7 @@
 				86B10C1B2697947F0060D6FC /* signUpViewController.swift */,
 				86B10C1E269DBEB70060D6FC /* mainViewController.swift */,
 				86B4D32B26B2A968004F4F3A /* profileViewController.swift */,
+				8668C24726BC1634001E855D /* dealsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 		86B10C062697239E0060D6FC /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				8668C24A26BC17F3001E855D /* Poppins-Bold.ttf */,
 				86B10C07269724010060D6FC /* Poppins-Medium.ttf */,
 				86B10C0A2697242A0060D6FC /* Poppins-Light.ttf */,
 				86B10C0D269724600060D6FC /* Poppins-SemiBold.ttf */,
@@ -231,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				86B10BE2269209D30060D6FC /* LaunchScreen.storyboard in Resources */,
+				8668C24B26BC17F3001E855D /* Poppins-Bold.ttf in Resources */,
 				86B10C0B2697242A0060D6FC /* Poppins-Light.ttf in Resources */,
 				86B10C08269724020060D6FC /* Poppins-Medium.ttf in Resources */,
 				86B10C0E269724600060D6FC /* Poppins-SemiBold.ttf in Resources */,
@@ -303,6 +310,7 @@
 				86B10C1F269DBEB80060D6FC /* mainViewController.swift in Sources */,
 				866ADD0226B910EF00F4A68C /* profile.swift in Sources */,
 				86B10BD8269209D00060D6FC /* SceneDelegate.swift in Sources */,
+				8668C24826BC1634001E855D /* dealsViewController.swift in Sources */,
 				86B10C1C2697947F0060D6FC /* signUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

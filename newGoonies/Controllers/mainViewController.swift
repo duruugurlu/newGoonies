@@ -10,6 +10,7 @@ import Firebase
 
 class mainViewController: UIViewController {
 
+    @IBOutlet weak var dealsButton: UIButton!
     @IBOutlet weak var profileImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,4 +46,7 @@ class mainViewController: UIViewController {
             profileImage.layer.borderWidth = 4
             profileImage.layer.borderColor = UIColor.white.cgColor
         }
+    @IBAction func dealsPressed(_ sender: Any) {
+        performSegue(withIdentifier: "toDeals", sender: nil)
+    }
 }
