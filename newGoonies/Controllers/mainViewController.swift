@@ -25,7 +25,7 @@ class mainViewController: UIViewController {
     }
     
     @objc func goToProfile() {
-        performSegue(withIdentifier: "toProfile", sender: nil)
+        loadScreen(name: "Main", identifier: "profileViewController")
     }
     
     func configureUI() {
@@ -47,6 +47,6 @@ class mainViewController: UIViewController {
             profileImage.layer.borderColor = UIColor.white.cgColor
         }
     @IBAction func dealsPressed(_ sender: Any) {
-        performSegue(withIdentifier: "toDeals", sender: nil)
+        loadScreen(name: "Main", identifier: "dealsViewController")
     }
 }

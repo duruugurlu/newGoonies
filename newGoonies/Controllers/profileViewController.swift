@@ -112,7 +112,7 @@ class profileViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBAction func logOutPressed(_ sender: Any) {
         do {
             try Auth.auth().signOut()
-            performSegue(withIdentifier: "backToLogInVC", sender: nil)
+            loadScreen(name: "Auth", identifier: "logInViewController")
         } catch {
             print("error")
         }
@@ -167,6 +167,6 @@ class profileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
 //  Segueing to the main page
     @IBAction func homePressed(_ sender: Any) {
-        performSegue(withIdentifier: "profileToMain", sender: nil)
+        loadScreen(name: "Main", identifier: "first")
     }
 }

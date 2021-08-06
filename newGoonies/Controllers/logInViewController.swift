@@ -43,7 +43,7 @@ class logInViewController: UIViewController {
     }
     
     @IBAction func signUpPressed(_ sender: Any) {
-        performSegue(withIdentifier: "toSignUpVC", sender: nil)
+        loadScreen(name: "Auth", identifier: "signUpViewController")
     }
     
     

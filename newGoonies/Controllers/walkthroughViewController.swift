@@ -39,13 +39,13 @@ class walkthroughViewController: UIViewController, customPageViewControllerDeleg
 
 
     }
-
+    
     @IBAction func skipClicked(_ sender: Any) {
-        performSegue(withIdentifier: "toLogInVC", sender: nil)
+        loadScreen(name: "Auth", identifier: "logInViewController")
     }
     
     @IBAction func getStartedClicked(_ sender: Any) {
-        performSegue(withIdentifier: "toLogInVC", sender: nil)
+        loadScreen(name: "Auth", identifier: "logInViewController")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

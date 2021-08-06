@@ -32,6 +32,9 @@
 		86B4D31226B01CB0004F4F3A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86B4D31126B01CB0004F4F3A /* GoogleService-Info.plist */; };
 		86B4D32C26B2A968004F4F3A /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B4D32B26B2A968004F4F3A /* profileViewController.swift */; };
 		86D3BC9C26B2CA8800306722 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D3BC9B26B2CA8800306722 /* File.swift */; };
+		B92CA60F26BD691C00012E3C /* Walkthrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B92CA60E26BD691C00012E3C /* Walkthrough.storyboard */; };
+		B92CA61226BD6B2500012E3C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92CA61126BD6B2500012E3C /* Extensions.swift */; };
+		B92CA61426BD6E1000012E3C /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B92CA61326BD6E1000012E3C /* Auth.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +67,9 @@
 		86D3BC9B26B2CA8800306722 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		95F483FCF207769B715BBE4C /* Pods_newGoonies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_newGoonies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC78EF83575919D2A9FE2FAD /* Pods-newGoonies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-newGoonies.release.xcconfig"; path = "Target Support Files/Pods-newGoonies/Pods-newGoonies.release.xcconfig"; sourceTree = "<group>"; };
+		B92CA60E26BD691C00012E3C /* Walkthrough.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Walkthrough.storyboard; sourceTree = "<group>"; };
+		B92CA61126BD6B2500012E3C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B92CA61326BD6E1000012E3C /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,15 +140,15 @@
 		86B10BD4269209D00060D6FC /* newGoonies */ = {
 			isa = PBXGroup;
 			children = (
+				B92CA61026BD6B1800012E3C /* Utils */,
+				B92CA60D26BD68E300012E3C /* Storyboards */,
 				866ADD0026B9108600F4A68C /* Struct Files */,
 				866ADCFA26B7EDC300F4A68C /* Views */,
 				86B10C062697239E0060D6FC /* Fonts */,
 				86B10BEE2692187C0060D6FC /* Controllers */,
 				86B10BD5269209D00060D6FC /* AppDelegate.swift */,
 				86B10BD7269209D00060D6FC /* SceneDelegate.swift */,
-				86B10BDB269209D00060D6FC /* Main.storyboard */,
 				86B10BDE269209D30060D6FC /* Assets.xcassets */,
-				86B10BE0269209D30060D6FC /* LaunchScreen.storyboard */,
 				86B4D31126B01CB0004F4F3A /* GoogleService-Info.plist */,
 				86B10BE3269209D30060D6FC /* Info.plist */,
 			);
@@ -175,6 +181,25 @@
 				86B10C0D269724600060D6FC /* Poppins-SemiBold.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		B92CA60D26BD68E300012E3C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				86B10BE0269209D30060D6FC /* LaunchScreen.storyboard */,
+				B92CA60E26BD691C00012E3C /* Walkthrough.storyboard */,
+				B92CA61326BD6E1000012E3C /* Auth.storyboard */,
+				86B10BDB269209D00060D6FC /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B92CA61026BD6B1800012E3C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B92CA61126BD6B2500012E3C /* Extensions.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,7 +268,9 @@
 				86B10C0E269724600060D6FC /* Poppins-SemiBold.ttf in Resources */,
 				86B10BDF269209D30060D6FC /* Assets.xcassets in Resources */,
 				866ADCFE26B7EDEB00F4A68C /* profileTableViewCell.xib in Resources */,
+				B92CA60F26BD691C00012E3C /* Walkthrough.storyboard in Resources */,
 				86B10BDD269209D00060D6FC /* Main.storyboard in Resources */,
+				B92CA61426BD6E1000012E3C /* Auth.storyboard in Resources */,
 				86B4D31226B01CB0004F4F3A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +335,7 @@
 				86B4D32C26B2A968004F4F3A /* profileViewController.swift in Sources */,
 				86B10BF726921A6B0060D6FC /* customPageViewController.swift in Sources */,
 				86B10C1F269DBEB80060D6FC /* mainViewController.swift in Sources */,
+				B92CA61226BD6B2500012E3C /* Extensions.swift in Sources */,
 				866ADD0226B910EF00F4A68C /* profile.swift in Sources */,
 				86B10BD8269209D00060D6FC /* SceneDelegate.swift in Sources */,
 				8668C24826BC1634001E855D /* dealsViewController.swift in Sources */,

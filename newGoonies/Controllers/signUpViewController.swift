@@ -40,7 +40,7 @@ class signUpViewController: UIViewController {
     }
     
     @IBAction func signInClicked(_ sender: Any) {
-        performSegue(withIdentifier: "signUpToLogIn", sender: nil)
+        loadScreen(name: "Auth", identifier: "logInViewController")
     }
     
     @IBAction func lockPressed(_ sender: Any) {
@@ -60,7 +60,7 @@ class signUpViewController: UIViewController {
                 } else {
                     let userDictionary = ["email" : self.emailTextField.text!, "username" : self.nameTextField.text!, "password" : self.passwordTextField.text!] as [String : Any]
                     self.firestoreDatabase.collection("Users").document(Auth.auth().currentUser!.email!).setData(userDictionary)
-                    self.performSegue(withIdentifier: "signUptoMainVC", sender: nil)
+                    self.loadScreen(name: "Main", identifier: "first")
                 }
             }
         } else {

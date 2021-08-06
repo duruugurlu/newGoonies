@@ -20,7 +20,7 @@ class demoPageViewController: UIViewController {
       }
     
     static func getInstance(image: String) -> demoPageViewController {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "demoPageViewController") as! demoPageViewController
+        let vc = UIStoryboard(name: "Walkthrough", bundle: nil).instantiateViewController(identifier: "demoPageViewController") as! demoPageViewController
         vc.imageName = image
         return vc
       }

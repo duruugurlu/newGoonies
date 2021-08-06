@@ -8,7 +8,7 @@
 import UIKit
 
 class dealsViewController: UIViewController {
-
+    
     var itemNum = 1
     @IBOutlet weak var materialsLabel: UILabel!
     @IBOutlet weak var materialsContentLabel: UILabel!
@@ -49,7 +49,7 @@ class dealsViewController: UIViewController {
         } else {
             itemsLabel.text = "\(itemNum) item"
         }
-       
+        
         priceLabel.text = "$ \(17 * itemNum)"
     }
     
@@ -66,7 +66,7 @@ class dealsViewController: UIViewController {
     }
     
     @IBAction func homePressed(_ sender: Any) {
-        performSegue(withIdentifier: "dealsToMain", sender: nil)
+        loadScreen(name: "Main", identifier: "first")
     }
     
 }
