@@ -95,6 +95,9 @@
                                 <rect key="frame" x="199" y="813" width="191" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="purchaseButton"/>
+                                <connections>
+                                    <action selector="purchasePressed:" destination="OSt-6m-mkf" eventType="touchUpInside" id="r38-Kj-9pP"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Materials" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lp0-Z3-CB6">
                                 <rect key="frame" x="43" y="317" width="116" height="21"/>
@@ -166,6 +169,7 @@ strawberries in a large.</string>
                         <outlet property="materialsContentLabel" destination="fsB-Xh-KZx" id="BLC-2b-u4j"/>
                         <outlet property="materialsLabel" destination="Lp0-Z3-CB6" id="Hu6-Hp-qyu"/>
                         <outlet property="priceLabel" destination="3qv-Ot-BRn" id="aSg-lB-8el"/>
+                        <outlet property="purchaseButton" destination="SAs-hp-a9r" id="sGa-Cq-HkN"/>
                         <outlet property="quantLabel" destination="Vpi-Zu-XQe" id="n6l-wW-PLN"/>
                         <outlet property="quantityLabel" destination="Yaz-xx-Fts" id="bkn-5t-VHR"/>
                         <outlet property="totalLabel" destination="6lj-sw-aFl" id="MTK-nk-clb"/>
@@ -355,10 +359,10 @@ strawberries in a large.</string>
             </objects>
             <point key="canvasLocation" x="-197" y="2274"/>
         </scene>
-        <!--View Controller-->
+        <!--Payment View Controller-->
         <scene sceneID="IqP-PY-rNr">
             <objects>
-                <viewController id="ajY-gJ-Amd" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="paymentViewController" id="ajY-gJ-Amd" customClass="paymentViewController" customModule="newGoonies" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="n53-01-g5H"/>
                         <viewControllerLayoutGuide type="bottom" id="5Cs-C9-IL4"/>
@@ -366,12 +370,57 @@ strawberries in a large.</string>
                     <view key="view" contentMode="scaleToFill" id="76L-hu-9m3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LW3-Q6-Z0Y">
+                                <rect key="frame" x="30" y="184" width="354" height="619"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dy4-Dn-cWP">
+                                    <size key="itemSize" width="342" height="133"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Wbs-yE-QIG">
+                                        <rect key="frame" x="0.0" y="0.0" width="342" height="133"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ciD-Cx-1sv">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="133"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBv-Qd-F23">
+                                <rect key="frame" x="329" y="82" width="59" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.31502059830000001" green="0.31598501870000001" blue="0.32344360900000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="homekit" catalog="system" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="homePressed:" destination="lAT-b8-UmT" eventType="touchUpInside" id="t2L-fW-JHX"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Payment Methods" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCp-Lo-12H">
+                                <rect key="frame" x="30" y="106" width="167" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.31502059830000001" green="0.31598501870000001" blue="0.32344360900000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="paymentCollectionView" destination="LW3-Q6-Z0Y" id="GuY-Su-nxb"/>
+                        <outlet property="titleLabel" destination="RCp-Lo-12H" id="QcD-rd-wFS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lZX-FE-wn3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="645" y="2273"/>
+            <point key="canvasLocation" x="628" y="2273"/>
         </scene>
     </scenes>
     <resources>

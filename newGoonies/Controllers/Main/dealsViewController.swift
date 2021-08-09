@@ -22,6 +22,8 @@ class dealsViewController: UIViewController {
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var quantityLabel: UILabel!
+    @IBOutlet weak var purchaseButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
@@ -67,6 +69,10 @@ class dealsViewController: UIViewController {
     
     @IBAction func homePressed(_ sender: Any) {
         loadScreen(name: "Main", identifier: "first")
+    }
+    
+    @IBAction func purchasePressed(_ sender: Any) {
+        loadScreen(name: "Main", identifier: "paymentViewController")
     }
     
 }
