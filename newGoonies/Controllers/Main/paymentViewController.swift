@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class paymentViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
@@ -47,5 +48,12 @@ class paymentViewController: UIViewController, UICollectionViewDelegate, UIColle
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
             return CGSize(width: 342, height: 133)
         }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            let vc = SFSafariViewController(url: URL(string: "https://i.pinimg.com/originals/38/ff/a4/38ffa4616c7e43522afa0d3569fb522b.gif")!)
+            present(vc, animated: true, completion: nil)
+        }
+    }
 
 }
