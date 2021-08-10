@@ -7,18 +7,23 @@
 
 import UIKit
 import SafariServices
+import StoreKit
 
-class paymentViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class paymentViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, SKProductsRequestDelegate, SKPaymentTransactionObserver {
+    
     
     @IBOutlet weak var paymentCollectionView: UICollectionView!
     @IBOutlet weak var titleLabel: UILabel!
     
     var paymentArray = [UIImage]()
+    private var models = [SKProduct]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureUI()
+        fetchProducts()
+        SKPaymentQueue.default().add(self)
     }
     
     func configureUI() {
@@ -54,6 +59,32 @@ class paymentViewController: UIViewController, UICollectionViewDelegate, UIColle
             let vc = SFSafariViewController(url: URL(string: "https://i.pinimg.com/originals/38/ff/a4/38ffa4616c7e43522afa0d3569fb522b.gif")!)
             present(vc, animated: true, completion: nil)
         }
+        if indexPath.row == 1 {
+            let payment = SKPayment(product: models[0])
+            SKPaymentQueue.default().add(payment)
+        }
+    }
+    
+//    Payment
+    
+    func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
+        DispatchQueue.main.async {
+            self.models = response.products
+        }
+    }
+    
+    enum Product : String, CaseIterable {
+        case Whopper = "com.myapp.Whopper"
+        case IceCream = "com.myApp.IceCream"
     }
 
+    private func fetchProducts() {
+        let request = SKProductsRequest(productIdentifiers: Set(Product.allCases.compactMap({$0.rawValue})))
+        request.delegate = self
+        request.start()
+    }
+    
+    func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
+//        no impl
+    }
 }

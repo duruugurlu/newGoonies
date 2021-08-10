@@ -1,0 +1,44 @@
+{
+  "products" : [
+    {
+      "displayPrice" : "17",
+      "familyShareable" : false,
+      "internalID" : "336C87F5",
+      "localizations" : [
+        {
+          "description" : "Delicious burger",
+          "displayName" : "Whopper",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.myapp.Whopper",
+      "referenceName" : "Whopper",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "310F149E",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "Ice Cream",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.myapp.IceCream",
+      "referenceName" : "Ice Cream",
+      "type" : "Consumable"
+    }
+  ],
+  "settings" : {
+
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 1,
+    "minor" : 0
+  }
+}
