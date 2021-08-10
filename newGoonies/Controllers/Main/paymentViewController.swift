@@ -14,6 +14,7 @@ class paymentViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     @IBOutlet weak var paymentCollectionView: UICollectionView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var homeButton: UIButton!
     
     var paymentArray = [UIImage]()
     private var models = [SKProduct]()
@@ -25,6 +26,8 @@ class paymentViewController: UIViewController, UICollectionViewDelegate, UIColle
         fetchProducts()
         SKPaymentQueue.default().add(self)
     }
+    
+//    Prepare User Interface
     
     func configureUI() {
         titleLabel.font = UIFont(name: "Poppins-Bold", size: 16.0)
@@ -39,6 +42,8 @@ class paymentViewController: UIViewController, UICollectionViewDelegate, UIColle
         paymentArray.append(UIImage(named: "paypal")!)
 
     }
+    
+//    Payment Collection View configuration
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return paymentArray.count
@@ -87,4 +92,11 @@ class paymentViewController: UIViewController, UICollectionViewDelegate, UIColle
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
 //        no impl
     }
+    
+//    Back to Main
+    
+    @IBAction func homePressed(_ sender: Any) {
+        loadScreen(name: "Main", identifier: "first")
+    }
+    
 }

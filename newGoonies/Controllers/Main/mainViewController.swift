@@ -14,6 +14,7 @@ class mainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet weak var expLabel: UILabel!
     @IBOutlet weak var dealsButton: UIButton!
     @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var restaurantsButton: UIButton!
     
     var categoryArray = [CategoryItem]()
     
@@ -89,7 +90,13 @@ class mainViewController: UIViewController, UICollectionViewDelegate, UICollecti
             profileImage.layer.borderWidth = 4
             profileImage.layer.borderColor = UIColor.white.cgColor
         }
+    
     @IBAction func dealsPressed(_ sender: Any) {
         loadScreen(name: "Main", identifier: "dealsViewController")
+    }
+    
+    
+    @IBAction func restaurantsPressed(_ sender: Any) {
+        loadScreen(name: "Main", identifier: "restaurantsViewController")
     }
 }

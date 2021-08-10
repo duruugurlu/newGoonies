@@ -177,9 +177,61 @@ strawberries in a large.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tGZ-kp-OO9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="646" y="1540"/>
+            <point key="canvasLocation" x="533" y="1540"/>
         </scene>
-        <!--Main View Controller-->
+        <!--Item 2-->
+        <scene sceneID="ITs-2g-5m9">
+            <objects>
+                <viewController storyboardIdentifier="restaurantsViewController" id="KF8-U3-dDt" customClass="restaurantsViewController" customModule="newGoonies" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SeY-gD-U0B"/>
+                        <viewControllerLayoutGuide type="bottom" id="7H3-vD-iCZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oB0-tb-B1p">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aYW-U9-fgz">
+                                <rect key="frame" x="20" y="188" width="374" height="625"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VDG-R6-Bi8">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ySE-l7-afu">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="EtF-In-J0n">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Restaurants" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WC0-v2-kuh">
+                                <rect key="frame" x="20" y="117" width="155" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="GaB-Ba-dhB"/>
+                    <connections>
+                        <outlet property="restaurantsCollectionView" destination="aYW-U9-fgz" id="eiG-Mg-kJU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EzD-N6-nsX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-197.10144927536234" y="849.77678571428567"/>
+        </scene>
+        <!--Item-->
         <scene sceneID="3Jf-O6-c08">
             <objects>
                 <viewController storyboardIdentifier="first" modalPresentationStyle="fullScreen" id="RPB-te-Per" customClass="mainViewController" customModule="newGoonies" customModuleProvider="target" sceneMemberID="viewController">
@@ -236,20 +288,30 @@ strawberries in a large.</string>
                                 <color key="textColor" red="0.31502059833529533" green="0.31598501868596202" blue="0.32344360898597169" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAC-Yl-8n8">
+                                <rect key="frame" x="49" y="824" width="82" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Restaurants"/>
+                                <connections>
+                                    <action selector="restaurantsPressed:" destination="RPB-te-Per" eventType="touchUpInside" id="PVh-UJ-fg2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="ogC-He-MNQ"/>
                     <navigationItem key="navigationItem" id="g9u-qJ-rub"/>
                     <connections>
                         <outlet property="categoryCollectionView" destination="oBf-Tk-13A" id="gtx-l0-I2q"/>
                         <outlet property="dealsButton" destination="S5E-lM-QFH" id="uPB-d8-LJm"/>
                         <outlet property="expLabel" destination="nP5-3q-uGm" id="TP2-AE-w8H"/>
                         <outlet property="profileImage" destination="BhU-91-DPo" id="giI-n2-tV9"/>
+                        <outlet property="restaurantsButton" destination="lAC-Yl-8n8" id="7Yi-Sm-QMN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K1J-CL-Get" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-197.10144927536234" y="1539.5089285714284"/>
+            <point key="canvasLocation" x="-197" y="1540"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="JWL-dW-7AZ">
@@ -357,7 +419,7 @@ strawberries in a large.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gyH-ih-Gmo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-197" y="2274"/>
+            <point key="canvasLocation" x="1283" y="1540"/>
         </scene>
         <!--Payment View Controller-->
         <scene sceneID="IqP-PY-rNr">
@@ -400,6 +462,7 @@ strawberries in a large.</string>
                                     <imageReference key="image" image="homekit" catalog="system" symbolScale="large"/>
                                 </state>
                                 <connections>
+                                    <action selector="homePressed:" destination="ajY-gJ-Amd" eventType="touchUpInside" id="JOq-BX-itj"/>
                                     <action selector="homePressed:" destination="lAT-b8-UmT" eventType="touchUpInside" id="t2L-fW-JHX"/>
                                 </connections>
                             </button>
@@ -414,13 +477,14 @@ strawberries in a large.</string>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="homeButton" destination="EBv-Qd-F23" id="rkA-FA-LDZ"/>
                         <outlet property="paymentCollectionView" destination="LW3-Q6-Z0Y" id="GuY-Su-nxb"/>
                         <outlet property="titleLabel" destination="RCp-Lo-12H" id="QcD-rd-wFS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lZX-FE-wn3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="628" y="2273"/>
+            <point key="canvasLocation" x="2016" y="1540"/>
         </scene>
     </scenes>
     <resources>

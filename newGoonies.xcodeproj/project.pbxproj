@@ -14,6 +14,10 @@
 		865AF06C26C16AE300934B99 /* paymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865AF06B26C16AE300934B99 /* paymentViewController.swift */; };
 		865AF07426C16BBF00934B99 /* paymentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865AF07226C16BBF00934B99 /* paymentCollectionViewCell.swift */; };
 		865AF07526C16BBF00934B99 /* paymentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 865AF07326C16BBF00934B99 /* paymentCollectionViewCell.xib */; };
+		865AF07A26C2C5D200934B99 /* restaurantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865AF07926C2C5D100934B99 /* restaurantsViewController.swift */; };
+		865AF07E26C2C63500934B99 /* restaurantsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865AF07C26C2C63500934B99 /* restaurantsCollectionViewCell.swift */; };
+		865AF07F26C2C63500934B99 /* restaurantsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 865AF07D26C2C63500934B99 /* restaurantsCollectionViewCell.xib */; };
+		865AF08226C2CF8200934B99 /* restaurants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865AF08126C2CF8200934B99 /* restaurants.swift */; };
 		8668C24826BC1634001E855D /* dealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8668C24726BC1634001E855D /* dealsViewController.swift */; };
 		8668C24B26BC17F3001E855D /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8668C24A26BC17F3001E855D /* Poppins-Bold.ttf */; };
 		866ADCFD26B7EDEB00F4A68C /* profileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866ADCFB26B7EDEB00F4A68C /* profileTableViewCell.swift */; };
@@ -52,6 +56,10 @@
 		865AF07226C16BBF00934B99 /* paymentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = paymentCollectionViewCell.swift; sourceTree = "<group>"; };
 		865AF07326C16BBF00934B99 /* paymentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = paymentCollectionViewCell.xib; sourceTree = "<group>"; };
 		865AF07726C254A300934B99 /* Payment.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Payment.storekit; sourceTree = "<group>"; };
+		865AF07926C2C5D100934B99 /* restaurantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = restaurantsViewController.swift; sourceTree = "<group>"; };
+		865AF07C26C2C63500934B99 /* restaurantsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = restaurantsCollectionViewCell.swift; sourceTree = "<group>"; };
+		865AF07D26C2C63500934B99 /* restaurantsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = restaurantsCollectionViewCell.xib; sourceTree = "<group>"; };
+		865AF08126C2CF8200934B99 /* restaurants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = restaurants.swift; sourceTree = "<group>"; };
 		8668C24726BC1634001E855D /* dealsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dealsViewController.swift; sourceTree = "<group>"; };
 		8668C24A26BC17F3001E855D /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		866ADCFB26B7EDEB00F4A68C /* profileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileTableViewCell.swift; sourceTree = "<group>"; };
@@ -142,6 +150,7 @@
 				86B4D32B26B2A968004F4F3A /* profileViewController.swift */,
 				8668C24726BC1634001E855D /* dealsViewController.swift */,
 				865AF06B26C16AE300934B99 /* paymentViewController.swift */,
+				865AF07926C2C5D100934B99 /* restaurantsViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -155,6 +164,8 @@
 				865AF05D26C150D200934B99 /* categoryCollectionViewCell.xib */,
 				865AF07226C16BBF00934B99 /* paymentCollectionViewCell.swift */,
 				865AF07326C16BBF00934B99 /* paymentCollectionViewCell.xib */,
+				865AF07C26C2C63500934B99 /* restaurantsCollectionViewCell.swift */,
+				865AF07D26C2C63500934B99 /* restaurantsCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -165,6 +176,7 @@
 				86D3BC9B26B2CA8800306722 /* File.swift */,
 				866ADD0126B910EF00F4A68C /* profile.swift */,
 				865AF06126C153A400934B99 /* category.swift */,
+				865AF08126C2CF8200934B99 /* restaurants.swift */,
 			);
 			path = "Struct Files";
 			sourceTree = "<group>";
@@ -308,6 +320,7 @@
 				86B10BE2269209D30060D6FC /* LaunchScreen.storyboard in Resources */,
 				8668C24B26BC17F3001E855D /* Poppins-Bold.ttf in Resources */,
 				86B10C0B2697242A0060D6FC /* Poppins-Light.ttf in Resources */,
+				865AF07F26C2C63500934B99 /* restaurantsCollectionViewCell.xib in Resources */,
 				865AF07526C16BBF00934B99 /* paymentCollectionViewCell.xib in Resources */,
 				86B10C08269724020060D6FC /* Poppins-Medium.ttf in Resources */,
 				86B10C0E269724600060D6FC /* Poppins-SemiBold.ttf in Resources */,
@@ -373,6 +386,7 @@
 				866ADCFD26B7EDEB00F4A68C /* profileTableViewCell.swift in Sources */,
 				86B10C032696FCDE0060D6FC /* logInViewController.swift in Sources */,
 				86D3BC9C26B2CA8800306722 /* File.swift in Sources */,
+				865AF07E26C2C63500934B99 /* restaurantsCollectionViewCell.swift in Sources */,
 				86B10BDA269209D00060D6FC /* ViewController.swift in Sources */,
 				86B10BF4269219530060D6FC /* demoPageViewController.swift in Sources */,
 				86B10BFA269480010060D6FC /* tutorialPageViewController.swift in Sources */,
@@ -380,9 +394,11 @@
 				86B10BD6269209D00060D6FC /* AppDelegate.swift in Sources */,
 				865AF05E26C150D200934B99 /* categoryCollectionViewCell.swift in Sources */,
 				86B4D32C26B2A968004F4F3A /* profileViewController.swift in Sources */,
+				865AF07A26C2C5D200934B99 /* restaurantsViewController.swift in Sources */,
 				86B10BF726921A6B0060D6FC /* customPageViewController.swift in Sources */,
 				86B10C1F269DBEB80060D6FC /* mainViewController.swift in Sources */,
 				865AF06C26C16AE300934B99 /* paymentViewController.swift in Sources */,
+				865AF08226C2CF8200934B99 /* restaurants.swift in Sources */,
 				B92CA61226BD6B2500012E3C /* Extensions.swift in Sources */,
 				865AF06226C153A400934B99 /* category.swift in Sources */,
 				865AF07426C16BBF00934B99 /* paymentCollectionViewCell.swift in Sources */,
