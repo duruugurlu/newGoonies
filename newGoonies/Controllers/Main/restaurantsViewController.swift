@@ -10,17 +10,39 @@ import UIKit
 class restaurantsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
    
     @IBOutlet weak var restaurantsCollectionView: UICollectionView!
+    @IBOutlet weak var restaurantLabel: UILabel!
+    
+    
     var restaurantArray = [Restaurant]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureRestaurants()
+        restaurantLabel.font = UIFont(name: "Poppins-SemiBold", size: 17.0)
+
+    }
+    
+//    Configure the restaurants and collection view prep
+    
+    func configureRestaurants() {
         restaurantsCollectionView.dataSource = self
         restaurantsCollectionView.delegate = self
         restaurantsCollectionView.register(restaurantsCollectionViewCell.nib(), forCellWithReuseIdentifier: restaurantsCollectionViewCell.identifier)
-        configureRestaurants()
+        
+        let peximet = Restaurant.init(name: "Peximet", image: UIImage(named: "peximet")!)
+        let aimerlecafe = Restaurant.init(name: "Aimer le Café", image: UIImage(named: "aimerlecafe")!)
+        let porter = Restaurant.init(name: "Porter", image: UIImage(named: "porter")!)
+        let lacivert = Restaurant.init(name: "Lacivert Restaurant", image: UIImage(named: "lacivert")!)
+        
+        restaurantArray.append(peximet)
+        restaurantArray.append(aimerlecafe)
+        restaurantArray.append(porter)
+        restaurantArray.append(lacivert)
 
     }
+    
+//    Collection view configuration
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 4
@@ -37,17 +59,12 @@ class restaurantsViewController: UIViewController, UICollectionViewDelegate, UIC
             return CGSize(width: 342, height: 133)
         }
     
-    func configureRestaurants() {
-        let peximet = Restaurant.init(name: "Peximet", image: UIImage(named: "peximet")!)
-        let aimerlecafe = Restaurant.init(name: "Aimer le Café", image: UIImage(named: "aimerlecafe")!)
-        let porter = Restaurant.init(name: "Porter", image: UIImage(named: "porter")!)
-        let lacivert = Restaurant.init(name: "Lacivert Restaurant", image: UIImage(named: "lacivert")!)
-        
-        restaurantArray.append(peximet)
-        restaurantArray.append(aimerlecafe)
-        restaurantArray.append(porter)
-        restaurantArray.append(lacivert)
-
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            loadScreen(name: "Main", identifier: "peximetViewController")
+        }
     }
+    
+    
     
 }

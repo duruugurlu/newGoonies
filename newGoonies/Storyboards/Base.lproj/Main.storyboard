@@ -192,7 +192,7 @@ strawberries in a large.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aYW-U9-fgz">
-                                <rect key="frame" x="20" y="188" width="374" height="625"/>
+                                <rect key="frame" x="-6" y="187" width="430" height="626"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VDG-R6-Bi8">
@@ -213,10 +213,10 @@ strawberries in a large.</string>
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Restaurants" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WC0-v2-kuh">
-                                <rect key="frame" x="20" y="117" width="155" height="21"/>
+                                <rect key="frame" x="153" y="116" width="108" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.69803921570000005" green="0.2470588235" blue="0.33725490200000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -224,12 +224,31 @@ strawberries in a large.</string>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="bookmark" catalog="system" selectedImage="bookmark.fill" id="GaB-Ba-dhB"/>
                     <connections>
+                        <outlet property="restaurantLabel" destination="WC0-v2-kuh" id="FI5-NT-yt3"/>
                         <outlet property="restaurantsCollectionView" destination="aYW-U9-fgz" id="eiG-Mg-kJU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EzD-N6-nsX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-197" y="895"/>
+            <point key="canvasLocation" x="-197.10144927536234" y="894.64285714285711"/>
+        </scene>
+        <!--Peximet View Controller-->
+        <scene sceneID="fhC-18-4NP">
+            <objects>
+                <viewController storyboardIdentifier="peximetViewController" id="IGE-lb-j63" customClass="peximetViewController" customModule="newGoonies" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aOe-lK-Dw8"/>
+                        <viewControllerLayoutGuide type="bottom" id="qJh-vg-n4x"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fqS-ad-HTo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cVW-1p-3On" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="532" y="895"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="op6-ql-zRC">

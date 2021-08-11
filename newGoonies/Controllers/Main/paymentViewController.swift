@@ -96,7 +96,7 @@ class paymentViewController: UIViewController, UICollectionViewDelegate, UIColle
 //    Back to Main
     
     @IBAction func homePressed(_ sender: Any) {
-        loadScreen(name: "Main", identifier: "first")
+        loadScreen(name: "Main", identifier: "tabBar")
     }
     
 }

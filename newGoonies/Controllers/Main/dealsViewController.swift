@@ -68,7 +68,7 @@ class dealsViewController: UIViewController {
     }
     
     @IBAction func homePressed(_ sender: Any) {
-        loadScreen(name: "Main", identifier: "first")
+        loadScreen(name: "Main", identifier: "tabBar")
     }
     
     @IBAction func purchasePressed(_ sender: Any) {

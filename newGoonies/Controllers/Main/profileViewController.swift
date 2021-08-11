@@ -167,6 +167,6 @@ class profileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
 //  Segueing to the main page
     @IBAction func homePressed(_ sender: Any) {
-        loadScreen(name: "Main", identifier: "first")
+        loadScreen(name: "Main", identifier: "tabBar")
     }
 }

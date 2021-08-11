@@ -41,6 +41,7 @@
 		86B10C1F269DBEB80060D6FC /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B10C1E269DBEB70060D6FC /* mainViewController.swift */; };
 		86B4D31226B01CB0004F4F3A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86B4D31126B01CB0004F4F3A /* GoogleService-Info.plist */; };
 		86B4D32C26B2A968004F4F3A /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B4D32B26B2A968004F4F3A /* profileViewController.swift */; };
+		86BABE3A26C4033200ECC0D2 /* peximetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BABE3926C4033200ECC0D2 /* peximetViewController.swift */; };
 		86D3BC9C26B2CA8800306722 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D3BC9B26B2CA8800306722 /* File.swift */; };
 		B92CA60F26BD691C00012E3C /* Walkthrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B92CA60E26BD691C00012E3C /* Walkthrough.storyboard */; };
 		B92CA61226BD6B2500012E3C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92CA61126BD6B2500012E3C /* Extensions.swift */; };
@@ -85,6 +86,7 @@
 		86B10C1E269DBEB70060D6FC /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
 		86B4D31126B01CB0004F4F3A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		86B4D32B26B2A968004F4F3A /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
+		86BABE3926C4033200ECC0D2 /* peximetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = peximetViewController.swift; sourceTree = "<group>"; };
 		86D3BC9B26B2CA8800306722 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		95F483FCF207769B715BBE4C /* Pods_newGoonies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_newGoonies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC78EF83575919D2A9FE2FAD /* Pods-newGoonies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-newGoonies.release.xcconfig"; path = "Target Support Files/Pods-newGoonies/Pods-newGoonies.release.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				8668C24726BC1634001E855D /* dealsViewController.swift */,
 				865AF06B26C16AE300934B99 /* paymentViewController.swift */,
 				865AF07926C2C5D100934B99 /* restaurantsViewController.swift */,
+				86BABE3926C4033200ECC0D2 /* peximetViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				865AF06C26C16AE300934B99 /* paymentViewController.swift in Sources */,
 				865AF08226C2CF8200934B99 /* restaurants.swift in Sources */,
 				B92CA61226BD6B2500012E3C /* Extensions.swift in Sources */,
+				86BABE3A26C4033200ECC0D2 /* peximetViewController.swift in Sources */,
 				865AF06226C153A400934B99 /* category.swift in Sources */,
 				865AF07426C16BBF00934B99 /* paymentCollectionViewCell.swift in Sources */,
 				866ADD0226B910EF00F4A68C /* profile.swift in Sources */,
