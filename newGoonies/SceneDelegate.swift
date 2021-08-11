@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let currentUser = Auth.auth().currentUser
         if currentUser != nil {
             let board = UIStoryboard(name: "Main", bundle: nil)
-            let VC = board.instantiateViewController(identifier: "first") as! UIViewController
+            let VC = board.instantiateViewController(identifier: "tabBar") as! UIViewController
             window?.rootViewController = VC
         }
     }

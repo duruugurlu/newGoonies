@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RPB-te-Per">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iTc-ar-Gbt">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -179,7 +179,7 @@ strawberries in a large.</string>
             </objects>
             <point key="canvasLocation" x="533" y="1540"/>
         </scene>
-        <!--Item 2-->
+        <!--Restaurants View Controller-->
         <scene sceneID="ITs-2g-5m9">
             <objects>
                 <viewController storyboardIdentifier="restaurantsViewController" id="KF8-U3-dDt" customClass="restaurantsViewController" customModule="newGoonies" customModuleProvider="target" sceneMemberID="viewController">
@@ -222,16 +222,35 @@ strawberries in a large.</string>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="GaB-Ba-dhB"/>
+                    <tabBarItem key="tabBarItem" title="" image="bookmark" catalog="system" selectedImage="bookmark.fill" id="GaB-Ba-dhB"/>
                     <connections>
                         <outlet property="restaurantsCollectionView" destination="aYW-U9-fgz" id="eiG-Mg-kJU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EzD-N6-nsX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-197.10144927536234" y="849.77678571428567"/>
+            <point key="canvasLocation" x="-197" y="895"/>
         </scene>
-        <!--Item-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="op6-ql-zRC">
+            <objects>
+                <tabBarController storyboardIdentifier="tabBar" id="iTc-ar-Gbt" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6xn-l8-uro">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.69803921570000005" green="0.2470588235" blue="0.33725490200000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="RPB-te-Per" kind="relationship" relationship="viewControllers" id="CTV-gT-pW7"/>
+                        <segue destination="KF8-U3-dDt" kind="relationship" relationship="viewControllers" id="daE-HF-mJs"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vnH-Do-ZGT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1086" y="1178"/>
+        </scene>
+        <!--Main View Controller-->
         <scene sceneID="3Jf-O6-c08">
             <objects>
                 <viewController storyboardIdentifier="first" modalPresentationStyle="fullScreen" id="RPB-te-Per" customClass="mainViewController" customModule="newGoonies" customModuleProvider="target" sceneMemberID="viewController">
@@ -299,7 +318,7 @@ strawberries in a large.</string>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="ogC-He-MNQ"/>
+                    <tabBarItem key="tabBarItem" title="" image="homekit" catalog="system" selectedImage="homekit" id="ogC-He-MNQ"/>
                     <navigationItem key="navigationItem" id="g9u-qJ-rub"/>
                     <connections>
                         <outlet property="categoryCollectionView" destination="oBf-Tk-13A" id="gtx-l0-I2q"/>
@@ -487,9 +506,12 @@ strawberries in a large.</string>
             <point key="canvasLocation" x="2016" y="1540"/>
         </scene>
     </scenes>
+    <color key="tintColor" systemColor="systemBlueColor"/>
     <resources>
         <image name="ProfileBackground" width="1125" height="2523"/>
         <image name="arrow" width="30" height="48"/>
+        <image name="bookmark" catalog="system" width="112" height="128"/>
+        <image name="bookmark.fill" catalog="system" width="112" height="128"/>
         <image name="deals" width="1125" height="2376"/>
         <image name="decrease" width="99" height="99"/>
         <image name="descriptions" width="459" height="231"/>
@@ -502,6 +524,9 @@ strawberries in a large.</string>
         <image name="whopper" width="1038" height="492"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
