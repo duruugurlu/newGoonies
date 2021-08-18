@@ -21,9 +21,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Log In" translatesAutoresizingMaskIntoConstraints="NO" id="Zeo-1x-fBc">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Log In" translatesAutoresizingMaskIntoConstraints="NO" id="Zeo-1x-fBc">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="59x-ox-4Cp">
                                 <rect key="frame" x="73" y="674" width="303" height="34"/>
@@ -83,6 +82,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xtK-83-Kpf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Zeo-1x-fBc" firstAttribute="trailing" secondItem="xtK-83-Kpf" secondAttribute="trailing" id="Kds-H5-qe2"/>
+                            <constraint firstItem="Zeo-1x-fBc" firstAttribute="top" secondItem="oZ1-zs-VAF" secondAttribute="top" id="Pwo-Us-Bqs"/>
+                            <constraint firstItem="Zeo-1x-fBc" firstAttribute="leading" secondItem="xtK-83-Kpf" secondAttribute="leading" id="WOJ-0C-xhJ"/>
+                            <constraint firstAttribute="bottom" secondItem="Zeo-1x-fBc" secondAttribute="bottom" id="kvQ-nH-uG4"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2US-g8-VvC"/>
                     <connections>
@@ -121,9 +126,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Register" translatesAutoresizingMaskIntoConstraints="NO" id="bpt-FZ-SNC">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Register" translatesAutoresizingMaskIntoConstraints="NO" id="bpt-FZ-SNC">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcn-WC-Als">
                                 <rect key="frame" x="33" y="692" width="345" height="64"/>
@@ -182,6 +186,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Cy5-HM-Mtt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bpt-FZ-SNC" firstAttribute="top" secondItem="A3x-e3-TaA" secondAttribute="top" id="P97-kx-HGP"/>
+                            <constraint firstItem="bpt-FZ-SNC" firstAttribute="leading" secondItem="Cy5-HM-Mtt" secondAttribute="leading" id="SyS-x3-X52"/>
+                            <constraint firstAttribute="bottom" secondItem="bpt-FZ-SNC" secondAttribute="bottom" id="Z6Y-qj-H33"/>
+                            <constraint firstItem="bpt-FZ-SNC" firstAttribute="trailing" secondItem="Cy5-HM-Mtt" secondAttribute="trailing" id="fyL-bE-aV2"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5m0-HV-1M2"/>
                     <connections>

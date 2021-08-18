@@ -1,4 +1,8 @@
 {
+  "identifier" : "DDBF57D0",
+  "nonRenewingSubscriptions" : [
+
+  ],
   "products" : [
     {
       "displayPrice" : "17",
@@ -39,6 +43,6 @@
   ],
   "version" : {
     "major" : 1,
-    "minor" : 0
+    "minor" : 1
   }
 }
