@@ -44,6 +44,7 @@
 		86BABE3A26C4033200ECC0D2 /* peximetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BABE3926C4033200ECC0D2 /* peximetViewController.swift */; };
 		86BABE3D26CE22D100ECC0D2 /* infoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BABE3C26CE22D100ECC0D2 /* infoViewController.swift */; };
 		86BABE4026CE6ECB00ECC0D2 /* restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BABE3F26CE6ECA00ECC0D2 /* restaurant.swift */; };
+		86BABE4326CFEE1900ECC0D2 /* Restaurant.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86BABE4226CFEE1800ECC0D2 /* Restaurant.storyboard */; };
 		86D3BC9C26B2CA8800306722 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D3BC9B26B2CA8800306722 /* File.swift */; };
 		B92CA60F26BD691C00012E3C /* Walkthrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B92CA60E26BD691C00012E3C /* Walkthrough.storyboard */; };
 		B92CA61226BD6B2500012E3C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92CA61126BD6B2500012E3C /* Extensions.swift */; };
@@ -91,6 +92,7 @@
 		86BABE3926C4033200ECC0D2 /* peximetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = peximetViewController.swift; sourceTree = "<group>"; };
 		86BABE3C26CE22D100ECC0D2 /* infoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoViewController.swift; sourceTree = "<group>"; };
 		86BABE3F26CE6ECA00ECC0D2 /* restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = restaurant.swift; sourceTree = "<group>"; };
+		86BABE4226CFEE1800ECC0D2 /* Restaurant.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Restaurant.storyboard; sourceTree = "<group>"; };
 		86D3BC9B26B2CA8800306722 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		95F483FCF207769B715BBE4C /* Pods_newGoonies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_newGoonies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC78EF83575919D2A9FE2FAD /* Pods-newGoonies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-newGoonies.release.xcconfig"; path = "Target Support Files/Pods-newGoonies/Pods-newGoonies.release.xcconfig"; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 				B92CA60E26BD691C00012E3C /* Walkthrough.storyboard */,
 				B92CA61326BD6E1000012E3C /* Auth.storyboard */,
 				86B10BDB269209D00060D6FC /* Main.storyboard */,
+				86BABE4226CFEE1800ECC0D2 /* Restaurant.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				86B10BDD269209D00060D6FC /* Main.storyboard in Resources */,
 				B92CA61426BD6E1000012E3C /* Auth.storyboard in Resources */,
 				86B4D31226B01CB0004F4F3A /* GoogleService-Info.plist in Resources */,
+				86BABE4326CFEE1900ECC0D2 /* Restaurant.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

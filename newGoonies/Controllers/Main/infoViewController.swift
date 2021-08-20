@@ -21,6 +21,7 @@ class infoViewController: UIViewController {
     @IBOutlet weak var operatingHoursLabel: UILabel!
     @IBOutlet weak var aboutLabel: UILabel!
     @IBOutlet weak var aboutContent: UILabel!
+    @IBOutlet weak var homeButton: UIButton!
     
     let decoder = JSONDecoder()
     let firestoreDatabase = Firestore.firestore()
@@ -114,5 +115,9 @@ class infoViewController: UIViewController {
             openOrClose.textColor = UIColor(named: "close")
         }
     }
-  
+    
+    @IBAction func homePressed(_ sender: Any) {
+        loadScreen(name: "Main", identifier: "tabBar")
+    }
+    
 }
