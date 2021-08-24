@@ -61,7 +61,7 @@ class restaurantsViewController: UIViewController, UICollectionViewDelegate, UIC
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.row == 0 {
-            loadScreen(name: "Main", identifier: "\(restaurantArray[indexPath.row].resName.lowercased())ViewController")
+            loadScreen(name: "Restaurant", identifier: "\(restaurantArray[indexPath.row].resName.lowercased())ViewController")
         }
     }
     
